@@ -12,7 +12,7 @@ public class ProAppointmentService {
     @Autowired
     private AppointmentRepository appointmentRepository;
 
-    public Appointment find(String appointmentId) {
+    public Appointment find(Integer appointmentId) {
         return appointmentRepository.findById(appointmentId).orElseThrow();
     }
 
@@ -20,7 +20,7 @@ public class ProAppointmentService {
         return appointmentRepository.findAll();
     }
 
-    public List<Appointment> findByPractitionerId(String practitionerId) {
+    public List<Appointment> findByPractitionerId(Integer practitionerId) {
         return appointmentRepository.findByPractitionerId(practitionerId);
     }
 }

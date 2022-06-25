@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AppointmentRepository extends CrudRepository<Appointment, String> {
-    List<Appointment> findByPractitionerId(String practitionerId);
+public interface AppointmentRepository extends CrudRepository<Appointment, Integer> {
+    List<Appointment> findByPractitionerId(Integer practitionerId);
     List<Appointment> findAll();
 }

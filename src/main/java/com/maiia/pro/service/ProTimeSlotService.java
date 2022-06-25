@@ -12,7 +12,7 @@ public class ProTimeSlotService {
     @Autowired
     private TimeSlotRepository timeSlotRepository;
 
-    public List<TimeSlot> findByPractitionerId(String practitionerId) {
+    public List<TimeSlot> findByPractitionerId(Integer practitionerId) {
         return timeSlotRepository.findByPractitionerId(practitionerId);
     }
 }

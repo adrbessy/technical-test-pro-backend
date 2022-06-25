@@ -18,7 +18,7 @@ public class ProAppointmentController {
 
     @ApiOperation(value = "Get appointments by practitionerId")
     @GetMapping("/{practitionerId}")
-    public List<Appointment> getAppointmentsByPractitioner(@PathVariable final String practitionerId) {
+    public List<Appointment> getAppointmentsByPractitioner(@PathVariable final Integer practitionerId) {
         return proAppointmentService.findByPractitionerId(practitionerId);
     }
 
